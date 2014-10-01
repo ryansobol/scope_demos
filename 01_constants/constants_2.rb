@@ -1,26 +1,25 @@
 puts RUBY_VERSION
 puts
 
-module Instructor
-end
+puts "Object ancestors: #{Object.ancestors.inspect}"
 
-module Student
-  # p Object.ancestors
-  puts Instructor
-end
-
-#################################
-
-# puts
-# class Homework < Object
-#   p Homework.ancestors
-#   puts Instructor
+# class Student
+#   puts
+#   puts "Student ancestors: #{Student.ancestors.inspect}"
 # end
 
-#################################
+# class Homework < Object
+#   puts
+#   puts "Homework ancestors: #{Homework.ancestors.inspect}"
+# end
 
-# puts
-# class LateHomework < BasicObject
-#   p ::RailsCasts.ancestors
-#   puts Instructor
+# module Instructor
+#   puts
+#   puts "Student ancestors: #{Instructor.ancestors.inspect}"
+# end
+
+# class Quiz < BasicObject
+#   puts
+#   # ADVANCED: Quiz is defined within Object
+#   puts "Quiz: ancestors #{::Quiz.ancestors.inspect}"
 # end
