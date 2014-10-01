@@ -1,25 +1,21 @@
-puts RUBY_VERSION, nil
+puts RUBY_VERSION
+puts
 
-Greeting = "Hello from Object"
-
-module Instructor
-  Greeting = "Hello from Instructor"
-
-  module Assignment
-    Greeting = "Hello from Assignment"
-
-    puts Greeting
-    # p Module.nesting
-    # p Object.ancestors
-    puts
-  end
-
-  puts Greeting
-  # p Module.nesting
-  # p Object.ancestors
-  puts
+module Animal
+  Greeting = 'Hello from Animal'
 end
 
-puts Greeting
-# p Module.nesting
-# p Object.ancestors
+module Cat::Assignment
+  # p Module.nesting
+  puts Greeting
+end
+
+###############################
+
+# puts
+# module Animal
+#   module Cat
+#     p Module.nesting
+#     puts Greeting
+#   end
+# end

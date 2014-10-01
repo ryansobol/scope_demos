@@ -1,46 +1,26 @@
-puts RUBY_VERSION, nil
+puts RUBY_VERSION
+puts
 
-puts Module.new do 
+module Instructor
 end
 
-# foo = Module.new do
-# end
-# 
-# puts foo
-# puts defined?(foo)
-# 
-# Foo = Module.new do
-# end
-# 
-# puts Foo
-# puts defined?(Foo)
-# 
-# module Bar
-# end
-# 
-# puts Bar
-# puts defined?(Bar)
+module Student
+  # p Object.ancestors
+  puts Instructor
+end
 
-########################################
+#################################
 
 # puts
-# puts Class.new do 
+# class Homework < Object
+#   p Homework.ancestors
+#   puts Instructor
 # end
-# 
-# baz = Class.new do
+
+#################################
+
+# puts
+# class LateHomework < BasicObject
+#   p ::RailsCasts.ancestors
+#   puts Instructor
 # end
-# 
-# puts baz
-# puts defined?(baz)
-# 
-# Baz = Class.new do
-# end
-# 
-# puts Baz
-# puts defined?(Baz)
-# 
-# class Qux
-# end
-# 
-# puts Qux
-# puts defined?(Qux)

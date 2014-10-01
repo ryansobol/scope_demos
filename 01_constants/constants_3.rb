@@ -1,25 +1,26 @@
-puts RUBY_VERSION, nil
+puts RUBY_VERSION
+puts
 
-module Instructor
-end
+Greeting = 'Hello from Object'
 
-module Student
+module Animal
+  Greeting = 'Hello from Animal'
+
+  module Dog
+    Greeting = 'Hello from Dog'
+
+    puts Greeting
+    # p Module.nesting
+    # p Object.ancestors
+    puts
+  end
+
+  puts Greeting
+  # p Module.nesting
   # p Object.ancestors
-  puts Instructor
+  puts
 end
 
-#################################
-
-# puts
-# class Homework < Object
-#   p Homework.ancestors
-#   puts Instructor
-# end
-
-#################################
-
-# puts
-# class RailsCasts < BasicObject
-#   p ::RailsCasts.ancestors
-#   puts Instructor
-# end
+puts Greeting
+# p Module.nesting
+# p Object.ancestors
